@@ -1,0 +1,9 @@
+in:
+  type: randomj
+  rows: {{ env.ROWS }}
+  threads: 1
+  primary_key: id
+  schema:
+    - {name: id, type: long}
+    - {name: value, type: string, length: 10 }
+
