@@ -1,0 +1,14 @@
+timezone: Asia/Tokyo
+
+schedule:
+  daily>: 12:00:00 
+
++embulk_run:
+  sh>: /embulk/embulk run config/example_4.yaml.liquid
+  _error:
+     sh>: |
+       echo "Error!!!"
+
++tar:
+  sh>: tar -czvf ${session_date}.tar output.txt
+
